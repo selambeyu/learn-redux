@@ -1,14 +1,16 @@
-export const increment=()=>{
+export const increment=(nr)=>{
     return{
-        type:'INCREMENT'
+        type:'INCREMENT',
+        payload: nr
     }
   
 
 }
 
-export const decrement=()=>{
+export const decrement=(nr)=>{
     return{
-        type:'DECREMENT'
+        type:'DECREMENT',
+        payload: nr
     }
 }
 
