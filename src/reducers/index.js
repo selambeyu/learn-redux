@@ -4,8 +4,8 @@ import {combineReducers} from 'redux'
 
 
 const rootReducers=combineReducers({
-    counterReducer,
-    isLoggedReducer
+    counter:counterReducer,
+    Logged:isLoggedReducer
 })
 
 export default rootReducers;
