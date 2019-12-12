@@ -3,8 +3,11 @@ import React from 'react';
 import {useSelector, useDispatch} from 'react-redux'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {increment,decrement} from './actions'
+import Nav from './nav'
 import About from './about'
 import Shop from './shop'
+import Functionalcom from './component/functionalcom'
+import Classcom from './component/classcom'
 import './App.css';
 
 function App() {
@@ -15,11 +18,17 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Nav></Nav>
+        <Switch>
+        <Route exact path="/shop" component={Shop}></Route>
+        <Route exact path="/about" component={About}></Route>
       <h1>Counter {counter}</h1>
       {isLogged ?"Valuabel information which i shoudn't see":" "}
       <button onClick={()=>dispatch(increment(5))}>+</button>
       <button onClick={()=>dispatch(decrement(5))}>-</button>
-
+      <Classcom></Classcom>
+      <Functionalcom></Functionalcom>
+      </Switch>
     </div>
     </Router>
     
